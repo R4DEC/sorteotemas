@@ -4,10 +4,7 @@
 
 /* Links */
 a,
-a:focus,
-a:hover {
-  color: #fff;
-}
+a:focus
 
 /*
  * Base structure
