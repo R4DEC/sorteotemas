@@ -35,7 +35,6 @@ body {
   background: url('/lib/images/train.jpg');
   background-repeat: no-repeat;
   background-size: cover;
-  opacity: 0.5;
 }
 
 .cover-container {
