@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -16,7 +17,7 @@
     <link href="/CSS/cover.css" rel="stylesheet">
   </head>
 
-  <body class="text-center">
+  <body class="text-center" ng-app="myApp">
     <div class="cover-container d-flex h-100 p-10 mx-auto flex-column">
       <header class="masthead mb-auto">
         <div class="inner">
@@ -31,10 +32,10 @@
           <div class="row">
             <div class="col-md-5 col-md-offset-2">
               <br>
-                <div class="card">
-                  <div class="card-header btn btn-outline-success" onclick="">OBTENER DIRECTOR</div>
+                <div class="card" ng-controller="myCtrl">
+                  <div class="card-header btn btn-outline-success" ng-click="getDirector()">OBTENER DIRECTOR</div>
                   <div class="card-body bg-dark text-white">
-                      CHAPLIN
+                    {{director}}
                   </div>
                 </div>
               </br>
