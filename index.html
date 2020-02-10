@@ -28,13 +28,14 @@
       <br>
         <h1 class="title text-danger">ASIGNACION DE DIRECTORES Y FECHAS</h1>
       </br>
+
       <main role="main" class="inner cover">
           <div class="row">
             <div class="col-md-5 col-md-offset-2">
               <br>
                 <div class="card" ng-controller="myCtrl">
-                  <div class="card-header btn btn-outline-success" ng-click="getDirector()">OBTENER DIRECTOR</div>
-                  <div class="card-body bg-dark text-white">
+                  <div class="card-header btn btn-outline-success" ng-model="director" ng-click="getDirector()">OBTENER DIRECTOR</div>
+                  <div class="card-body bg-dark text-white" placeholder = "director">
                     {{ director }}
                   </div>
                 </div>
