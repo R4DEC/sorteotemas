@@ -15,6 +15,7 @@
     <!-- Custom styles for this template -->
     <link href="/CSS/cover.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
+    <script src="director.js"></script>
   </head>
 
   <body class="text-center">
@@ -34,9 +35,9 @@
             <div class="col-md-5 col-md-offset-2">
               <br>
                 <div class="card" ng-controller="myCtrl">
-                  <div class="card-header btn btn-outline-success" ng-model="director" ng-click="getDirector()">OBTENER DIRECTOR</div>
+                  <div class="card-header btn btn-outline-success" ng-click="getDirector()">OBTENER DIRECTOR</div>
                   <div class="card-body bg-dark text-white" placeholder = "director">
-                    {{ director }}
+                    {{director}}
                   </div>
                 </div>
               </br>
