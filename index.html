@@ -17,7 +17,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
   </head>
 
-  <body class="text-center" ng-app="">
+  <body class="text-center" ng-app="myApp">
     <div class="cover-container d-flex h-100 p-10 mx-auto flex-column">
       <header class="masthead mb-auto">
         <div class="inner">
@@ -29,13 +29,13 @@
         <h1 class="title text-danger">ASIGNACION DE DIRECTORES Y FECHAS</h1>
       </br>
 
-      <main role="main" class="inner cover">
+      <main role="main" class="inner cover" ng-controller="myCtrl">
           <div class="row">
             <div class="col-md-5 col-md-offset-2">
               <br>
                 <div class="card">
-                  <div class="card-header btn btn-outline-success" onclick="">OBTENER DIRECTOR</div>
-                  <div class="card-body bg-dark text-white">CHAPLIN</div>
+                  <div class="card-header btn btn-outline-success" ng-click="directorFunction()">OBTENER DIRECTOR</div>
+                  <div class="card-body bg-dark text-white">{{ director }}</div>
                 </div>
               </br>
             </div>
@@ -54,21 +54,21 @@
             </div>
           </div>
       </main>
-      
-      <div>
- 
-        <p>Input something in the input box:</p>
-        <p>Name: <input type="text" ng-model="name"></p>
-        <p>{{name}}</p>
-        
-      </div>
-
       <footer class="mastfoot mt-auto">
         <div class="inner">
           <p>Propiedad intelectual Jorge Escaño Martin 2020</p>
         </div>
       </footer>
     </div>
+    <script>
+      var app = angular.module('myApp', []);
+      app.controller('myCtrl', function($scope) {
+          $scope.director = 'CHAPLIN';
+          $scope.myFunction = function() {
+              $scope.director = 'Coppola'
+          }
+      });
+      </script> 
     <script src="/CSS/bootstrap.min.js"></script>
   </body>
 </html>
