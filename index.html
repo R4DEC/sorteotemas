@@ -44,10 +44,8 @@
             <div class="col-md-5 col-md-offset-4">
               <br>
                 <div class="card">
-                  <div class="card-header btn btn-outline-success" onclick=""> OBTENER FECHA</div>
-                  <div class="card-body bg-dark text-white">
-                    04/03/2020
-                  </div>
+                  <div class="card-header btn btn-outline-success" ng-click="dateFunction()"> OBTENER FECHA</div>
+                  <div class="card-body bg-dark text-white">{{ date }}</div>
                 </div>
               </br>
 
@@ -64,8 +62,12 @@
       var app = angular.module('myApp', []);
       app.controller('myCtrl', function($scope) {
           $scope.director = 'CHAPLIN';
+          $scope.date = '04/03/2020';
           $scope.directorFunction = function() {
               $scope.director = 'COPPOLA'
+          }
+          $scope.dateFunction = function() {
+              $scope.director = '08/03/2020'
           }
       });
       </script> 
