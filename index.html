@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="/CSS/icono.ico">
+    <link rel="icon" href="/lib/images/icono.ico">
 
     <title>Mi sorteo</title>
 
@@ -15,6 +15,10 @@
     <!-- Custom styles for this template -->
     <link href="/CSS/cover.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script type="text/javascript" src="/lib/main/module.js"></script>
+    <script type="text/javascript" src="/lib/main/controller.js"></script>
+    <script type="text/javascript" src="/lib/main/Utils.js"></script>
+
   </head>
 
   <body class="text-center" ng-app="myApp">
@@ -44,11 +48,10 @@
             <div class="col-md-5 col-md-offset-4">
               <br>
                 <div class="card">
-                  <div class="card-header btn btn-outline-success" ng-click="dateFunction()"> OBTENER FECHA</div>
+                  <div class="card-header btn btn-outline-success" ng-click="dateFunction()">OBTENER FECHA</div>
                   <div class="card-body bg-dark text-white">{{ date }}</div>
                 </div>
               </br>
-
             </div>
           </div>
       </main>
@@ -58,19 +61,6 @@
         </div>
       </footer>
     </div>
-    <script>
-      var app = angular.module('myApp', []);
-      app.controller('myCtrl', function($scope) {
-          $scope.director = 'CHAPLIN';
-          $scope.date = '04/03/2020';
-          $scope.directorFunction = function() {
-              $scope.director = 'COPPOLA'
-          }
-          $scope.dateFunction = function() {
-              $scope.date = '08/03/2020'
-          }
-      });
-      </script> 
     <script src="/CSS/bootstrap.min.js"></script>
   </body>
 </html>
