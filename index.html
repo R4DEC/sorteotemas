@@ -16,16 +16,18 @@
     <link href="/CSS/cover.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
     <script type="text/javascript" src="/lib/main/Utils.js"></script>
-    <script type="text/javascript" src="/lib/main/module.js"></script>
-    <script type="text/javascript" src="/lib/main/controller.js"></script>
+    <script type="text/javascript" src="/lib/main/controllers/module.js"></script>
+    <script type="text/javascript" src="/lib/main/controllers/mainController.js"></script>
 
   </head>
 
-  <body class="text-center" ng-app="myApp">
+  <body class="text-center" ng-app="myApp" ng-controller="myCtrl">
     <div class="cover-container d-flex h-100 p-10 mx-auto flex-column">
       <header class="masthead mb-auto">
         <div class="inner">
           <h4>HISTORIA DE LA CINEMATOGRAFIA</h4>
+          <audio src="/lib/music/theme.mp3" controls>
+          </audio>
         </div>
       </header>
 
@@ -33,7 +35,7 @@
         <h1 class="title text-danger">ASIGNACION DE DIRECTORES Y FECHAS</h1>
       </br>
 
-      <main role="main" class="inner cover" ng-controller="myCtrl">
+      <main role="main" class="inner cover" >
           <div class="row">
             <div class="col-md-5 col-md-offset-2">
               <br>
@@ -58,9 +60,8 @@
       <footer class="mastfoot mt-auto">
         <div class="inner">
           <p>Propiedad intelectual Jorge Escaño Martin 2020</p>
-          <audio src="/lib/music/theme.mp3" controls>
-          </audio>
         </div>
+        <div class="btn btn-outline-success" ng-click="resetFunction()">RESETEAR VALORES</div>
       </footer>
     </div>
     <script src="/CSS/bootstrap.min.js"></script>
