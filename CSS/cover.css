@@ -23,6 +23,10 @@ body {
   text-shadow: 2px 2px white
 }
 
+.nametitle{
+  text-shadow: 2px 2px red
+}
+
 body {
   display: -ms-flexbox;
   display: -webkit-box;
@@ -103,4 +107,9 @@ body {
  */
 .mastfoot {
   color: rgba(255, 255, 255, .5);
+}
+
+
+.audio { 
+  width: 200px; 
 }
