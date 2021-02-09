@@ -52,6 +52,26 @@
               </br>
             </div>
           </div>
+          <div class="row">
+            <div class="col-md-5 col-md-offset-2">
+              <br>
+                <div class="card">
+                  <div class="card-header btn btn-success">INTRODUCE Nº DE ALUMNOS</div>
+                  <input class="card-body bg-dark text-white" type="number" ng-model="originalNumber" ng-change="setNumber()">{{ originalNumber }}</input>
+                </div>
+              </br>
+            </div>
+            <div class="col-md-2 col-md-offset-2">
+            </div>
+            <div class="col-md-5 col-md-offset-4">
+              <br>
+                <div class="card">
+                  <div class="card-header btn btn-outline-success" ng-click="numberFunction()">OBTENER NÚMERO</div>
+                  <div class="card-body bg-dark text-white">{{ number }}</div>
+                </div>
+              </br>
+            </div>
+          </div>
       </main>
       <footer class="mastfoot mt-auto">
         <div class="btn btn-danger" ng-click="resetFunction()">REINICIAR VALORES</div>
@@ -65,3 +85,6 @@
     <script src="/CSS/bootstrap.min.js"></script>
   </body>
 </html>
+
+
+
